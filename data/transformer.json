@@ -1,0 +1,45 @@
+{
+    "hidden_size":768,
+    "hidden_dropout_prob":0.1,
+    "num_hidden_layers":12,
+    "hidden_act":"gelu",
+    "num_attention_heads":12,
+    "intermediate_size":2304,
+    "max_position_embeddings":1025,
+    "type_vocab_size":2,
+    "vocab_size":50265,
+    "seq_len": 1025,
+    "batch_size": 8,
+    "layer_norm_eps": 1e-12,
+    "initializer_range": 0.02,
+    "pooler_type": "weightpooler",
+    "enable_fp16": "False",
+
+    "mixture_att": {
+        "mixture": false,
+        "layers": [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2]
+    },
+    "mixture_exp": {
+        "mixture": false,
+        "layers": [8, 8, 8, 8, 8, 8, 16, 16, 16, 16, 16, 16]
+    },
+
+    "attention_type": "meta",
+    "rank": 256,
+
+    "ffn_type": "vanilla",
+    "num_experts": 4,
+    "capacity_factor": 1.5,
+
+    "prune_epoch": 0,
+    "prune_ratio": 0,
+
+    "dataset": "wikitext-2-raw-v1",
+    "data_ratio": 1,
+    "preprocessed": true,
+    "dataset_cache": {
+        "wikitext": "/home/archen/bertcorpus/wikitext",
+        "bookcorpus": "/home/archen/bertcorpus/bookcorpus",
+        "bertcorpus": "/home/archen/bertcorpus/bertcorpus"
+    }
+}
